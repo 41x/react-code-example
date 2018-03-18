@@ -1,0 +1,165 @@
+/*right message*/
+.chatRightMessageContainer {
+    /*border: 1px solid;*/
+    position: relative;
+    text-align: right;
+    margin-top: 17px;
+}
+
+.chatRightMessage {
+    border-radius: 6px 0 6px 6px;
+    background-color: #B5F5BB;
+    margin-right: 10px;
+    padding: 9px 13px;
+    color: #000;
+    line-height: 22px;
+    display: inline-block;
+    text-align: left;
+    max-width: 96.9%;
+}
+
+.chatRightMessage::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 24px solid transparent;
+    border-top: 15px solid #B5F5BB;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 5px 0 0;
+}
+
+.chatRightMessageInfo {
+    line-height: 14px;
+    font-size: 12px;
+    text-align: right;
+    margin: 4.62px 20px 0 0;
+    color: #999;
+}
+
+.chatRightMessageInfo span {
+    margin-right: 2px;
+}
+
+/*left message*/
+.chatLeftMessageContainer {
+    position: relative;
+    text-align: left;
+    margin-top: 17px;
+    padding-right: 10px;
+}
+
+.chatLeftMessage {
+    border-radius: 0 6px 6px 6px;
+    background-color: #F0F0F0;
+    margin-left: 58px;
+    padding: 9px 13px;
+    color: #000;
+    line-height: 22px;
+    display: inline-block;
+    text-align: left;
+    max-width: 79.4%;
+}
+
+.chatLeftMessage::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-top: 15px solid #F0F0F0;
+
+    position: absolute;
+    top: 0;
+    left: 46px;
+    border-radius: 5px 0 0 0;
+
+}
+
+.chatLeftMessageInfo {
+    line-height: 14px;
+    font-size: 12px;
+    text-align: left;
+    margin: 4.62px 0 0 70px;
+    color: #999;
+}
+
+.companionIndicator {
+    display: inline-block;
+    border-radius: 50%;
+    height: 3px;
+    width: 3px;
+    background-color: #F0F0F0;
+    vertical-align: middle;
+    margin: 0 4px 0 5px;
+}
+
+.companionIndicator_active {
+    background-color: #38BD4C;
+}
+
+.companionName {
+    color: #888888;
+
+}
+
+.companionPosition {
+    color: #D7D8DB;
+}
+
+/*avatar*/
+.companionAvatar {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.companionImg {
+    width: 100%;
+    height: auto;
+}
+
+.wrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+:global {
+    .emoji {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* system message*/
+.systemMessage {
+    text-align: center;
+    padding: 20px 0;
+
+    span {
+        font-size: 13px;
+        color: #999;
+        background-color: #EEEEEE;
+        padding: 4px 10px;
+        border-radius: 20px;
+    }
+}
+
+.divider {
+    margin: 8px -13px;
+    width: inherit;
+}
+
+.link {
+    color: #38BD4C;
+}
+
+.header {
+    font-size: 12px;
+    color: #757575;
+}

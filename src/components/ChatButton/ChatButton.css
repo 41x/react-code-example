@@ -1,0 +1,63 @@
+
+.generalChatButton {
+    width: 48px;
+    height: 48px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 7;
+
+    position: fixed;
+    bottom: 17px;
+    right: 22px;
+
+    &:hover {
+        transition: 0.3s;
+        box-shadow: 0 6px 12px 0 #adadad;
+    }
+
+    text-align: center;
+
+    svg, img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -10px;
+        margin-left: -10px;
+        transition: transform 0.3s, opacity .15s;
+    }
+
+    img {
+        margin-top: -9px;
+        margin-left: -11px;
+        user-select: none;
+    }
+}
+
+.msgIcon {
+    opacity: 1;
+}
+
+.closeIcon {
+    opacity: 0;
+}
+
+.chatIsOpened {
+    .msgIcon {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+
+    .closeIcon {
+        opacity: 1;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 639px) {
+    .generalChatButton {
+        left: auto;
+        right: 10px;
+        position: fixed;
+    }
+}

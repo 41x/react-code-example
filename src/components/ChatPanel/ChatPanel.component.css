@@ -1,0 +1,223 @@
+.root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: 0.2s;
+
+    .chatContent::-webkit-scrollbar {
+        width: 5px;
+        background-color: #fff;
+    }
+    .chatContent::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+    }
+    .chatContent::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    position: relative;
+    height: calc(100% - 60px);
+}
+
+/*input*/
+.chatInputContainer {
+    border-top: 1px solid #E5E5E5;
+    height: 54px;
+    position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chatInput {
+    position: absolute;
+    left: 18.5px;
+    line-height: 16px;
+    padding: 0;
+    outline: none;
+    border: none;
+    width: 80%;
+    font-size: 13px;
+}
+
+.chatInput::placeholder {
+    color: #aaa;
+}
+
+.sendBtn {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 18px;
+}
+
+.sendBtn {
+    fill: #D7D8DB;
+}
+
+.sendBtn_hover:hover {
+    fill: #12D260;
+}
+
+.sendBtn_colored {
+    fill: #12D260;
+}
+
+.inputButton {
+    position: absolute;
+    height: 22px;
+
+    & > div {
+        display: inline-block;
+        height: 100%;
+        line-height: 18px;
+    }
+    & > svg {
+        margin-bottom: 3px;
+    }
+}
+
+.transferButton {
+    right: 20px;
+}
+
+.requestButton {
+    right: 120px;
+}
+
+.sendBtn:active {
+    fill: #D7D8DB;
+}
+
+.chatContent {
+    padding: 0 18px;
+    overflow-x: hidden;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    height: calc(100% - 54px);
+}
+
+.smooth {
+    -webkit-overflow-scrolling: touch;
+}
+
+.requestAmountPage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .controlsContainer {
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+
+        .requestAmountInput {
+            position: relative;
+            margin: 0;
+            input {
+                height: 50px;
+                font-size: 14px;
+                border-left: none;
+                border-right: none;
+                border-radius: 0;
+
+                &:focus {
+                    padding-top: inherit;
+                    border-color: #d8d8d8;
+                }
+                &:hover {
+                    border-color: #d8d8d8;
+                }
+            }
+
+            &:after {
+                content: '₽';
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                font-size: 1.5rem;
+                line-height: 20px;
+                margin-top: -10px;
+                color: #888;
+            }
+        }
+
+        .buttonContainer {
+            padding: 10px;
+            overflow: hidden;
+            button {
+                padding: 0 10px;
+                height: 36px;
+                font-size: 13px;
+            }
+
+            .sendRequest {
+                width: 69%;
+                float: right;
+            }
+            .cancelRequest {
+                float: left;
+                width: 30%;
+                color: #999;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .chatLeftMessageInfo {
+        margin: 8.62px 0 0 70px;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-height: 510px) {
+    .chatInputContainer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .chatContent {
+        height: calc(100% - 54px);
+        padding: 0 9px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 510px) {
+    .chatInput {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .chatContent {
+        height: calc(100% - 54px);
+        padding: 0 9px;
+    }
+
+    .chatInput {
+        font-size: 16px;
+    }
+
+    .chatInputContainer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+:global {
+    .no-scroll {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+}

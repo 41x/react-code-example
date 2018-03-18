@@ -1,0 +1,46 @@
+.root {
+    position: relative;
+
+    .avatar {
+        border-radius: 50%;
+        overflow: hidden;
+        color: #efefef;
+        font-size: 14px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .textAvatar {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+    }
+
+    div.indicator {
+        width: 10px;
+        height: 10px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+
+        border: 2px solid #FFFFFF;
+        animation: ggg 2s infinite;
+    }
+}
+
+@keyframes ggg {
+    0% {
+        background-color: #2962FF;
+    }
+    50% {
+        background-color: #42A5F5;
+    }
+    100% {
+        background-color: #2962FF;
+    }
+}

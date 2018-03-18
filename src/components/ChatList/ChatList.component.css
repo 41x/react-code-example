@@ -1,0 +1,24 @@
+.root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: 0.2s;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+    }
+    &::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    overflow: auto;
+    overflow-x: hidden;
+    height: calc(100% - 60px);
+    padding: 0 20px;
+
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+}

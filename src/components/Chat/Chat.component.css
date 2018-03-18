@@ -1,0 +1,230 @@
+.root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(118, 123, 133, 0.2);
+
+    position: fixed;
+    right: 22px;
+    bottom: 80px;
+    z-index: 8;
+
+    background-color: #FFFFFF;
+    border: 1px solid #D7D8DB;
+
+    height: 468px;
+    width: 330px;
+    overflow: hidden;
+
+    transition: visibility 0.15s, opacity 0.15s ease-out;
+    visibility: visible;
+    opacity: 1;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.landScapeChat {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #d1d1d1;
+    text-align: center;
+
+    opacity: 0;
+    z-index: -1;
+}
+
+@media screen and (min-aspect-ratio: 13/9) {
+    .landScapeVisible {
+        z-index: 10;
+        opacity: 1;
+    }
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toPortrait {
+    left: 50%;
+    margin-left: -34px;
+}
+
+.searchInput {
+    position: absolute;
+    left: 18px;
+    line-height: 16px;
+    padding: 0;
+    outline: none;
+    border: none;
+    width: 70%;
+    margin-left: 34px;
+    font-size: 13px;
+}
+
+.onActive {
+    position: absolute;
+    cursor: pointer;
+    &:active {
+        transform: scale(0.9) translateY(-50%);
+    }
+}
+
+.search {
+    position: absolute;
+    right: 50px;
+}
+
+.headerAvatar {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.headerContainer {
+    border-bottom: 1px solid #E5E5E5;
+    position: relative;
+    height: 60px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.indicator {
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+}
+
+.indicator_active {
+    background-color: #38BD4C;
+}
+
+.headerText {
+    color: #555555;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.allChats {
+    margin-left: 21px;
+    max-width: 250px;
+}
+
+.specificChat {
+    margin-left: 74px;
+    max-width: 196px;
+}
+
+.closeBtnWrapper {
+    right: 16px;
+}
+
+.loader {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-color: #ddd;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.showLoader {
+    visibility: visible;
+}
+
+.loader:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 4px;
+    background-color: #12D260;
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    from {
+        left: -200px;
+        width: 30%;
+    }
+    50% {
+        width: 30%;
+    }
+    70% {
+        width: 70%;
+    }
+    80% {
+        left: 50%;
+    }
+    95% {
+        left: 120%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .root {
+        border: 1px solid #E5E5E5;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-height: 510px) {
+    .root {
+        top: 0;
+        bottom: 0;
+        border-radius: 0;
+        height: inherit;
+    }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 510px) {
+
+}
+
+@media only screen and (max-width: 639px) {
+    .root {
+        border-radius: 0;
+        width: auto;
+        border: none;
+        box-shadow: none;
+        position: fixed;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 10;
+
+        .searchInput {
+            font-size: 16px;
+        }
+    }
+}

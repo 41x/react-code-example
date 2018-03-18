@@ -1,0 +1,67 @@
+.root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: 0.2s;
+    overflow: hidden;
+    position: relative;
+    margin: 0 -100px;
+    padding: 10px 100px;
+
+    &:hover {
+        cursor: pointer;
+        &:before {
+            background: #F1F8E9;
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .avatar {
+        width: 20%;
+        float: left;
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .description {
+        float: right;
+
+        min-height: 40px;
+        width: 60%;
+        .name {
+            color: #555555;
+        }
+        .message {
+            color: #A7A7A7;
+            font-size: 13px;
+        }
+
+    }
+
+    .time {
+        width: 20%;
+        float: right;
+        text-align: right;
+        color: #BEBEBE;
+        font-size: 11px;
+    }
+
+    .short {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+

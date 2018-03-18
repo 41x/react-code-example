@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="Chat-with-friends" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1202.000000, -1272.000000)">
+        <g id="Group-3" transform="translate(1202.000000, 1272.000000)">
+            <path d="M4,1 C2.34314575,1 1,2.34314575 1,4 L1,12.0935292 C1,13.7503835 2.34314575,15.0935292 4,15.0935292 L12.3231645,15.0935292 L16.8731672,19 L16.8731672,15.0935292 L18,15.0935292 C19.6568542,15.0935292 21,13.7503835 21,12.0935292 L21,4 C21,2.34314575 19.6568542,1 18,1 L4,1 Z" id="Rectangle-46" stroke="#FFFFFF" stroke-width="2"/>
+            <rect id="Rectangle-53" fill="#FFFFFF" x="5" y="5" width="9" height="2" rx="1"/>
+            <rect id="Rectangle-53" fill="#FFFFFF" x="5" y="9" width="6" height="2" rx="1"/>
+        </g>
+    </g>
+</svg>
