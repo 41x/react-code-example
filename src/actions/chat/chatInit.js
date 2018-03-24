@@ -18,19 +18,20 @@ import * as analytics from '../../core/analytics.v2';
  * @param {Array} handlers - Array of {event: "eventName", handler: function}.
  * @param {string} token - Session token.
  */
-const subscribeToSignalR = (url, hubName, handlers, token) => {
-    require('../../../tools/lib/jquery.1.8.0.min');
-    require('../../../tools/lib/jquery.signalR-2.2.1');
-
-    const connection = $.hubConnection(url);
-
+const subscribeToSignalR = async (url, hubName, handlers, token) => {
+    const signalR = await import('../../../tools/lib/signalR');
+    const { hubConnection } = signalR;
+    const connection = hubConnection(url);
     connection.qs = { sessionToken: token };
-
     const hubProxy = connection.createHubProxy(hubName);
 
     handlers.forEach((h) => {
         hubProxy.on(h.event, h.handler);
     });
+
+    connection.updateAppRelativeUrl = (conn) => {
+        conn.appRelativeUrl = '/chat/signalr';
+    };
 
     connection.start()
         .done(() => {
